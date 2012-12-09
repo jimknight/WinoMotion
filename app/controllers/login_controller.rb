@@ -1,13 +1,13 @@
 class LoginController < Formotion::FormController
   def init
     form = Formotion::Form.new({
-      title: "Login",
+      title: "You're a Wino",
       sections: [{
         rows: [{
-          title: "User Name",
+          title: "Email",
           type: :string,
-          placeholder: "name",
-          key: :user
+          placeholder: "email",
+          key: :email
         }, {
           title: "Password",
           type: :string,
@@ -39,7 +39,7 @@ class LoginController < Formotion::FormController
   end
 
   def login
-    [:user, :password, :remember].each { |prop|
+    [:email, :password, :remember].each { |prop|
       UserController.controller.send(prop.to_s + "=", form.render[prop])
     }
     self.navigationController.dismissModalViewControllerAnimated(true)

@@ -8,8 +8,8 @@ class UserController < UIViewController
 
     self.view.backgroundColor = UIColor.whiteColor
 
-    @user_label = UILabel.alloc.initWithFrame(CGRectZero)
-    self.view.addSubview(@user_label)
+    @email_label = UILabel.alloc.initWithFrame(CGRectZero)
+    self.view.addSubview(@email_label)
 
     @password_label = UILabel.alloc.initWithFrame(CGRectZero)
     self.view.addSubview(@password_label)
@@ -18,16 +18,16 @@ class UserController < UIViewController
     self.view.addSubview(@remember_label)
   end
 
-  def user=(user)
-    @user_label.text = "User: #{user}"
-    @user_label.sizeToFit
-    @user_label.center = [self.view.frame.size.width/2, self.view.frame.size.height/2 - 40]
+  def email=(email)
+    @email_label.text = "Email: #{email}"
+    @email_label.sizeToFit
+    @email_label.center = [self.view.frame.size.width/2, self.view.frame.size.height/2 - 40]
   end
 
   def password=(password)
     @password_label.text = "Password: #{password}"
     @password_label.sizeToFit
-    @password_label.center = [@user_label.center.x, @user_label.center.y + @password_label.bounds.size.height]
+    @password_label.center = [@email_label.center.x, @email_label.center.y + @password_label.bounds.size.height]
   end
 
   def remember=(remember)
