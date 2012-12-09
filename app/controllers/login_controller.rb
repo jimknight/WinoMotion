@@ -39,9 +39,15 @@ class LoginController < Formotion::FormController
   end
 
   def login
-    [:email, :password, :remember].each { |prop|
-      UserController.controller.send(prop.to_s + "=", form.render[prop])
-    }
-    self.navigationController.dismissModalViewControllerAnimated(true)
+    @searchViewController = SearchController.alloc.init
+    @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
+    @window.rootViewController = UINavigationController.alloc.initWithRootViewController(@searchViewController)
+    @window.rootViewController.wantsFullScreenLayout = true
+    @window.makeKeyAndVisible
+
+    # [:email, :password, :remember].each { |prop|
+    #   UserController.controller.send(prop.to_s + "=", form.render[prop])
+    # }
+    # self.navigationController.dismissModalViewControllerAnimated(true)
   end
 end
