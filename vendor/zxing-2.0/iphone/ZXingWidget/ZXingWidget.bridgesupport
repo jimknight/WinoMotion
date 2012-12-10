@@ -1,0 +1,875 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<enum name='BarcodeFormat_CODE_128' value='7'/>
+<enum name='BarcodeFormat_CODE_39' value='8'/>
+<enum name='BarcodeFormat_DATA_MATRIX' value='2'/>
+<enum name='BarcodeFormat_EAN_13' value='6'/>
+<enum name='BarcodeFormat_EAN_8' value='5'/>
+<enum name='BarcodeFormat_ITF' value='9'/>
+<enum name='BarcodeFormat_None' value='0'/>
+<enum name='BarcodeFormat_QR_CODE' value='1'/>
+<enum name='BarcodeFormat_UPC_A' value='4'/>
+<enum name='BarcodeFormat_UPC_E' value='3'/>
+<function name='ForceArrayAndStringCategoriesToLoad'>
+<retval declared_type='void' type='v'/>
+</function>
+<class name='AddContactAction'>
+<method selector='actionWithName:phoneNumbers:email:url:address:note:organization:jobTitle:' class_method='true'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<arg declared_type='NSArray*' name='nums' index='1' type='@'/>
+<arg declared_type='NSString*' name='em' index='2' type='@'/>
+<arg declared_type='NSString*' name='us' index='3' type='@'/>
+<arg declared_type='NSString*' name='ad' index='4' type='@'/>
+<arg declared_type='NSString*' name='nt' index='5' type='@'/>
+<arg declared_type='NSString*' name='org' index='6' type='@'/>
+<arg declared_type='NSString*' name='title' index='7' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='address'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='email'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='jobTitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='note'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='organization'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='phoneNumbers'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='setAddress:'>
+<arg declared_type='NSString*' name='address' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEmail:'>
+<arg declared_type='NSString*' name='email' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setJobTitle:'>
+<arg declared_type='NSString*' name='jobTitle' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setName:'>
+<arg declared_type='NSString*' name='name' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNote:'>
+<arg declared_type='NSString*' name='note' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOrganization:'>
+<arg declared_type='NSString*' name='organization' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPhoneNumbers:'>
+<arg declared_type='NSArray*' name='phoneNumbers' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUrlString:'>
+<arg declared_type='NSString*' name='urlString' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='urlString'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='BusinessCardParsedResult'>
+<method selector='addresses'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='birthday'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='emails'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='jobTitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='names'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='note'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='organization'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='phoneNumbers'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='pronunciation'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setAddresses:'>
+<arg declared_type='NSArray*' name='addresses' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBirthday:'>
+<arg declared_type='NSString*' name='birthday' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEmails:'>
+<arg declared_type='NSArray*' name='emails' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setJobTitle:'>
+<arg declared_type='NSString*' name='jobTitle' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNames:'>
+<arg declared_type='NSArray*' name='names' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNote:'>
+<arg declared_type='NSString*' name='note' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOrganization:'>
+<arg declared_type='NSString*' name='organization' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPhoneNumbers:'>
+<arg declared_type='NSArray*' name='phoneNumbers' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPronunciation:'>
+<arg declared_type='NSString*' name='pronunciation' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUrl:'>
+<arg declared_type='NSString*' name='url' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='url'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='CallAction'>
+<method selector='actionWithNumber:' class_method='true'>
+<arg declared_type='NSString*' name='number' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithNumber:'>
+<arg declared_type='NSString*' name='number' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='number'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setNumber:'>
+<arg declared_type='NSString*' name='number' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='urlForNumber:' class_method='true'>
+<arg declared_type='NSString*' name='number' index='0' type='@'/>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+</class>
+<class name='DataMatrixReader'>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='Decoder'>
+<method selector='cropRect'>
+<retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}'/>
+</method>
+<method selector='decodeImage:'>
+<arg declared_type='UIImage*' name='image' index='0' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='decodeImage:cropRect:'>
+<arg declared_type='UIImage*' name='image' index='0' type='@'/>
+<arg declared_type='CGRect' name='cropRect' index='1' type='{CGRect={CGPoint=ff}{CGSize=ff}}'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='image'>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method selector='readers'>
+<retval declared_type='NSSet*' type='@'/>
+</method>
+<method selector='resultPointCallback:'>
+<arg declared_type='CGPoint' name='point' index='0' type='{CGPoint=ff}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCropRect:'>
+<arg declared_type='CGRect' name='cropRect' index='0' type='{CGRect={CGPoint=ff}{CGSize=ff}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' name='delegate' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImage:'>
+<arg declared_type='UIImage*' name='image' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setReaders:'>
+<arg declared_type='NSSet*' name='readers' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSubsetBytesPerRow:'>
+<arg declared_type='size_t' name='subsetBytesPerRow' index='0' type='L'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSubsetData:'>
+<arg declared_type='unsigned char*' name='subsetData' index='0' type='*'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSubsetHeight:'>
+<arg declared_type='size_t' name='subsetHeight' index='0' type='L'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSubsetImage:'>
+<arg declared_type='UIImage*' name='subsetImage' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSubsetWidth:'>
+<arg declared_type='size_t' name='subsetWidth' index='0' type='L'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='subsetBytesPerRow'>
+<retval declared_type='size_t' type='L'/>
+</method>
+<method selector='subsetData'>
+<retval declared_type='unsigned char*' type='*'/>
+</method>
+<method selector='subsetHeight'>
+<retval declared_type='size_t' type='L'/>
+</method>
+<method selector='subsetImage'>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method selector='subsetWidth'>
+<retval declared_type='size_t' type='L'/>
+</method>
+</class>
+<class name='EmailAction'>
+<method selector='actionWithRecipient:subject:body:' class_method='true'>
+<arg declared_type='NSString*' name='recipient' index='0' type='@'/>
+<arg declared_type='NSString*' name='subject' index='1' type='@'/>
+<arg declared_type='NSString*' name='body' index='2' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithRecipient:subject:body:'>
+<arg declared_type='NSString*' name='recipient' index='0' type='@'/>
+<arg declared_type='NSString*' name='subject' index='1' type='@'/>
+<arg declared_type='NSString*' name='body' index='2' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='recipient'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setRecipient:'>
+<arg declared_type='NSString*' name='recipient' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='EmailAddressResultParser'>
+<method selector='isBasicallyValidEmailAddress:' class_method='true'>
+<arg declared_type='NSString*' name='address' index='0' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='EmailParsedResult'>
+<method selector='body'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='looksLikeAnEmailAddress:' class_method='true'>
+<arg declared_type='NSString*' name='s' index='0' type='@'/>
+<retval declared_type='_Bool' type='B'/>
+</method>
+<method selector='setBody:'>
+<arg declared_type='NSString*' name='body' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSubject:'>
+<arg declared_type='NSString*' name='subject' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTo:'>
+<arg declared_type='NSString*' name='to' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='subject'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='to'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='FormatReader'>
+<method selector='decode:'>
+<arg declared_type='id' name='grayImage' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='decode:andCallback:'>
+<arg declared_type='id' name='grayImage' index='0' type='@'/>
+<arg declared_type='id' name='callback' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithReader:'>
+<arg declared_type='id' name='reader' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='registerFormatReader:' class_method='true'>
+<arg declared_type='FormatReader*' name='formatReader' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='GeoParsedResult'>
+<method selector='initWithLocation:'>
+<arg declared_type='NSString*' name='location' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='location'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setLocation:'>
+<arg declared_type='NSString*' name='location' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='ISBNParsedResult'>
+<method selector='setValue:'>
+<arg declared_type='NSString*' name='value' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='value'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='MultiFormatOneDReader'>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='MultiFormatUPCEANReader'>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='NSArray'>
+<method selector='arrayWithStringIfNotNil:' class_method='true'>
+<arg declared_type='NSString*' name='string' index='0' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='stringArrayWithTrimmedWhitespace'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='cancelled'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='decoder:didDecodeImage:usingSubset:withResult:'>
+<arg declared_type='Decoder*' name='decoder' index='0' type='@'/>
+<arg declared_type='UIImage*' name='image' index='1' type='@'/>
+<arg declared_type='UIImage*' name='subset' index='2' type='@'/>
+<arg declared_type='TwoDDecoderResult*' name='result' index='3' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='decoder:failedToDecodeImage:usingSubset:reason:'>
+<arg declared_type='Decoder*' name='decoder' index='0' type='@'/>
+<arg declared_type='UIImage*' name='image' index='1' type='@'/>
+<arg declared_type='UIImage*' name='subset' index='2' type='@'/>
+<arg declared_type='NSString*' name='reason' index='3' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='decoder:foundPossibleResultPoint:'>
+<arg declared_type='Decoder*' name='decoder' index='0' type='@'/>
+<arg declared_type='CGPoint' name='point' index='1' type='{CGPoint=ff}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='decoder:willDecodeImage:usingSubset:'>
+<arg declared_type='Decoder*' name='decoder' index='0' type='@'/>
+<arg declared_type='UIImage*' name='image' index='1' type='@'/>
+<arg declared_type='UIImage*' name='subset' index='2' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='zxingController:didScanResult:'>
+<arg declared_type='ZXingWidgetController*' name='controller' index='0' type='@'/>
+<arg declared_type='NSString*' name='result' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='zxingControllerDidCancel:'>
+<arg declared_type='ZXingWidgetController*' name='controller' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSString'>
+<method selector='backslashUnescaped'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='fieldWithPrefix:'>
+<arg declared_type='NSString*' name='prefix' index='0' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='fieldWithPrefix:terminator:'>
+<arg declared_type='NSString*' name='prefix' index='0' type='@'/>
+<arg declared_type='NSString*' name='term' index='1' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='fieldsWithPrefix:'>
+<arg declared_type='NSString*' name='prefix' index='0' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='fieldsWithPrefix:terminator:'>
+<arg declared_type='NSString*' name='prefix' index='0' type='@'/>
+<arg declared_type='NSString*' name='term' index='1' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='htmlEscapedString'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='htmlEscapes' class_method='true'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='htmlUnescapedString'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='htmlUnescapes' class_method='true'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='looksLikeAURI'>
+<retval declared_type='_Bool' type='B'/>
+</method>
+<method selector='massagedURLString'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='stringWithTrimmedWhitespace'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='OpenUrlAction'>
+<method selector='URL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='actionWithURL:' class_method='true'>
+<arg declared_type='NSURL*' name='URL' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='alertButtonTitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='alertMessage'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='alertTitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='alertView:clickedButtonAtIndex:'>
+<arg declared_type='UIAlertView*' name='alertView' index='0' type='@'/>
+<arg declared_type='NSInteger' name='buttonIndex' index='1' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithURL:'>
+<arg declared_type='NSURL*' name='URL' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='openURL'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setURL:'>
+<arg declared_type='NSURL*' name='URL' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='OverlayView'>
+<method selector='cropRect'>
+<retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='displayedMessage'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='initWithFrame:cancelEnabled:oneDMode:'>
+<arg declared_type='CGRect' name='theFrame' index='0' type='{CGRect={CGPoint=ff}{CGSize=ff}}'/>
+<arg declared_type='BOOL' name='isCancelEnabled' index='1' type='B'/>
+<arg declared_type='BOOL' name='isOneDModeEnabled' index='2' type='B'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='oneDMode'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='points'>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='setCropRect:'>
+<arg declared_type='CGRect' name='cropRect' index='0' type='{CGRect={CGPoint=ff}{CGSize=ff}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' name='delegate' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisplayedMessage:'>
+<arg declared_type='NSString*' name='displayedMessage' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOneDMode:'>
+<arg declared_type='BOOL' name='oneDMode' index='0' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPoint:'>
+<arg declared_type='CGPoint' name='point' index='0' type='{CGPoint=ff}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPoints:'>
+<arg declared_type='NSMutableArray*' name='points' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='ParsedResult'>
+<method selector='actions'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='icon'>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method selector='populateActions'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stringForDisplay'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='typeName' class_method='true'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='ProductParsedResult'>
+<method selector='initWithProductID:normalizedProductID:'>
+<arg declared_type='NSString*' name='newProductID' index='0' type='@'/>
+<arg declared_type='NSString*' name='newNormalizedProductID' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='normalizedProductID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='productID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setNormalizedProductID:'>
+<arg declared_type='NSString*' name='normalizedProductID' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setProductID:'>
+<arg declared_type='NSString*' name='productID' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='QRCodeReader'>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='ResultAction'>
+<method selector='performActionWithController:shouldConfirm:'>
+<arg declared_type='UIViewController*' name='controller' index='0' type='@'/>
+<arg declared_type='_Bool' name='confirm' index='1' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='ResultParser'>
+<method selector='dictionaryForQueryString:' class_method='true'>
+<arg declared_type='NSString*' name='uri' index='0' type='@'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='parsedResultForString:' class_method='true'>
+<arg declared_type='NSString*' name='s' index='0' type='@'/>
+<retval declared_type='ParsedResult*' type='@'/>
+</method>
+<method selector='parsedResultForString:format:' class_method='true'>
+<arg declared_type='NSString*' name='s' index='0' type='@'/>
+<arg declared_type='BarcodeFormat' name='barcodeFormat' index='1' type='i'/>
+<retval declared_type='ParsedResult*' type='@'/>
+</method>
+<method selector='registerResultParserClass:' class_method='true'>
+<arg declared_type='Class' name='resultParser' index='0' type='#'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SMSAction'>
+<method selector='actionWithNumber:' class_method='true'>
+<arg declared_type='NSString*' name='number' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='actionWithNumber:body:' class_method='true'>
+<arg declared_type='NSString*' name='number' index='0' type='@'/>
+<arg declared_type='NSString*' name='body' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='body'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setBody:'>
+<arg declared_type='NSString*' name='body' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SMSParsedResult'>
+<method selector='body'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='initWithNumber:body:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<arg declared_type='NSString*' name='b' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='number'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setBody:'>
+<arg declared_type='NSString*' name='body' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNumber:'>
+<arg declared_type='NSString*' name='number' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='ShowMapAction'>
+<method selector='actionWithLocation:' class_method='true'>
+<arg declared_type='NSString*' name='location' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithLocation:'>
+<arg declared_type='NSString*' name='location' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='location'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setLocation:'>
+<arg declared_type='NSString*' name='location' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='TelParsedResult'>
+<method selector='initWithNumber:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='number'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setNumber:'>
+<arg declared_type='NSString*' name='number' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='TextParsedResult'>
+<method selector='initWithString:'>
+<arg declared_type='NSString*' name='s' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setText:'>
+<arg declared_type='NSString*' name='text' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='text'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='TwoDDecoderResult'>
+<method selector='copy'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='copyWithZone:'>
+<arg declared_type='NSZone*' name='zone' index='0' type='^{_NSZone=}'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithText:points:'>
+<arg declared_type='NSString*' name='text' index='0' type='@'/>
+<arg declared_type='NSArray*' name='points' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='points'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='resultWithText:points:' class_method='true'>
+<arg declared_type='NSString*' name='text' index='0' type='@'/>
+<arg declared_type='NSArray*' name='points' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setPoints:'>
+<arg declared_type='NSArray*' name='points' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setText:'>
+<arg declared_type='NSString*' name='text' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='text'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='URIParsedResult'>
+<method selector='URL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='initWithURLString:'>
+<arg declared_type='NSString*' name='s' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithURLString:URL:'>
+<arg declared_type='NSString*' name='s' index='0' type='@'/>
+<arg declared_type='NSURL*' name='ur' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithURLString:title:'>
+<arg declared_type='NSString*' name='s' index='0' type='@'/>
+<arg declared_type='NSString*' name='t' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithURLString:title:URL:'>
+<arg declared_type='NSString*' name='s' index='0' type='@'/>
+<arg declared_type='NSString*' name='t' index='1' type='@'/>
+<arg declared_type='NSURL*' name='ur' index='2' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setTitle:'>
+<arg declared_type='NSString*' name='title' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setURL:'>
+<arg declared_type='NSURL*' name='URL' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUrlString:'>
+<arg declared_type='NSString*' name='urlString' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='urlString'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='UniversalResultParser'>
+<method selector='initWithDefaultParsers' class_method='true'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='parsedResultForString:format:' class_method='true'>
+<arg declared_type='NSString*' name='s' index='0' type='@'/>
+<arg declared_type='BarcodeFormat' name='format' index='1' type='i'/>
+<retval declared_type='ParsedResult*' type='@'/>
+</method>
+</class>
+<class name='ZXingWidgetController'>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='fixedFocus'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithDelegate:showCancel:OneDMode:'>
+<arg declared_type='id' name='delegate' index='0' type='@'/>
+<arg declared_type='BOOL' name='shouldShowCancel' index='1' type='B'/>
+<arg declared_type='BOOL' name='shouldUseoOneDMode' index='2' type='B'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='overlayView'>
+<retval declared_type='OverlayView*' type='@'/>
+</method>
+<method selector='readers'>
+<retval declared_type='NSSet*' type='@'/>
+</method>
+<method selector='result'>
+<retval declared_type='ParsedResult*' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' name='delegate' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOverlayView:'>
+<arg declared_type='OverlayView*' name='overlayView' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setReaders:'>
+<arg declared_type='NSSet*' name='readers' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setResult:'>
+<arg declared_type='ParsedResult*' name='result' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSoundToPlay:'>
+<arg declared_type='NSURL*' name='soundToPlay' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTorch:'>
+<arg declared_type='BOOL' name='status' index='0' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='soundToPlay'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='torchIsOn'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<informal_protocol name='CancelDelegate'>
+<method selector='cancelled' type='v8@0:4'>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='DecoderDelegate'>
+<method selector='decoder:didDecodeImage:usingSubset:withResult:' type='v24@0:4@8@12@16@20'>
+<arg declared_type='Decoder*' name='decoder' index='0' type='@'/>
+<arg declared_type='UIImage*' name='image' index='1' type='@'/>
+<arg declared_type='UIImage*' name='subset' index='2' type='@'/>
+<arg declared_type='TwoDDecoderResult*' name='result' index='3' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='decoder:failedToDecodeImage:usingSubset:reason:' type='v24@0:4@8@12@16@20'>
+<arg declared_type='Decoder*' name='decoder' index='0' type='@'/>
+<arg declared_type='UIImage*' name='image' index='1' type='@'/>
+<arg declared_type='UIImage*' name='subset' index='2' type='@'/>
+<arg declared_type='NSString*' name='reason' index='3' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='decoder:foundPossibleResultPoint:' type='v20@0:4@8{CGPoint=ff}12'>
+<arg declared_type='Decoder*' name='decoder' index='0' type='@'/>
+<arg declared_type='CGPoint' name='point' index='1' type='{CGPoint=ff}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='decoder:willDecodeImage:usingSubset:' type='v20@0:4@8@12@16'>
+<arg declared_type='Decoder*' name='decoder' index='0' type='@'/>
+<arg declared_type='UIImage*' name='image' index='1' type='@'/>
+<arg declared_type='UIImage*' name='subset' index='2' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='ZXingDelegate'>
+<method selector='zxingController:didScanResult:' type='v16@0:4@8@12'>
+<arg declared_type='ZXingWidgetController*' name='controller' index='0' type='@'/>
+<arg declared_type='NSString*' name='result' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='zxingControllerDidCancel:' type='v12@0:4@8'>
+<arg declared_type='ZXingWidgetController*' name='controller' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>
