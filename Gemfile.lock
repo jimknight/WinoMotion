@@ -11,5 +11,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bubble-wrap
   formotion
   rake

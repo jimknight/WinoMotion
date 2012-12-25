@@ -42,19 +42,28 @@ class ScannerViewController < UIViewController
     #
     #   ZXingWidgetController *widController = [[ZXingWidgetController alloc] initWithDelegate:self showCancel:YES OneDMode:NO];
     #
-    @ZXingController = ZXingWidgetController.alloc.initWithDelegate(self, showCancel:true, OneDMode:false)
-    
-    readers = NSMutableSet.alloc.init
-    #readers.addObject(QRCodeReader.alloc.init)
-    readers.addObject(MultiFormatOneDReader.alloc.init)
-    @ZXingController.readers = readers
-    
-    self.presentModalViewController(@ZXingController, animated:true)
+
+    # @ZXingController = ZXingWidgetController.alloc.initWithDelegate(self, showCancel:true, OneDMode:false)
+    # readers = NSMutableSet.alloc.init
+    # #readers.addObject(QRCodeReader.alloc.init)
+    # readers.addObject(MultiFormatOneDReader.alloc.init)
+    # @ZXingController.readers = readers
+    # self.presentModalViewController(@ZXingController, animated:true)
+
+    result = "085000012178"
+    wine_controller = UIApplication.sharedApplication.delegate.wine_details_controller
+    navigationController.pushViewController(wine_controller, animated:true)
+    wine_controller.scan_barcode(result)
+
   end
   
   def zxingController(controller, didScanResult:result)
     self.dismissModalViewControllerAnimated(true)
     @result_label.text = result;
+
+    # get the json results from the search
+    # open the wine controller with json results
+
   end
   
   def zxingControllerDidCancel(controller) 

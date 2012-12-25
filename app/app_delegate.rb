@@ -14,7 +14,11 @@ class AppDelegate
 
     @window.rootViewController = tab_controller
     true
-    
+
+  end
+
+  def wine_details_controller
+    @wine_details_controller ||= WineController.alloc.init
   end
 end
 
