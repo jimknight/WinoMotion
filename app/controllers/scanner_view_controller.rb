@@ -1,5 +1,12 @@
 class ScannerViewController < UIViewController
 
+  def init
+    if super
+      self.tabBarItem = UITabBarItem.alloc.initWithTitle('Scan Barcode', image:UIImage.imageNamed('wine-glass.png'), tag:1)
+    end
+    self
+  end
+
   def viewDidLoad
     self.title = "Scan Barcode"
     @scanner_button = self.create_scanner_button
