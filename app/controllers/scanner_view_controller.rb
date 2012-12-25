@@ -1,11 +1,11 @@
 class ScannerViewController < UIViewController
-  
+
   def viewDidLoad
+    self.title = "Scan Barcode"
     @scanner_button = self.create_scanner_button
     self.view.addSubview(@scanner_button)
-    
-    @result_label = self.create_result_label
-    self.view.addSubview(@result_label)
+    # @result_label = self.create_result_label
+    # self.view.addSubview(@result_label)
   end
   
   def create_result_label
@@ -20,8 +20,8 @@ class ScannerViewController < UIViewController
   
   def create_scanner_button
     button = UIButton.buttonWithType(UIButtonTypeRoundedRect)
-    button.frame = [[(320 - 200)/2, 20], [200,50]]
-    button.setTitle("Launch Scan", forState:UIControlStateNormal) 
+    button.frame = [[(320 - 200)/2, 120], [200,50]]
+    button.setTitle("Scan Barcode", forState:UIControlStateNormal) 
     
     #
     # - (void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents

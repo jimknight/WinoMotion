@@ -1,23 +1,21 @@
 class AppDelegate
   def application(application, didFinishLaunchingWithOptions:launchOptions)
-        @scannerViewController = ScannerViewController.alloc.init
-    
+
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-    @window.rootViewController = UINavigationController.alloc.initWithRootViewController(@scannerViewController)
-    @window.rootViewController.wantsFullScreenLayout = true
     @window.makeKeyAndVisible
+
+    scanner_controller = ScannerViewController.alloc.init
+    sign_in_controller = SignInController.alloc.init
+    sign_up_controller = SignUpController.alloc.init
+
+    nav_controller = UINavigationController.alloc.initWithRootViewController(scanner_controller)
+    tab_controller = UITabBarController.alloc.initWithNibName(nil, bundle: nil)
+    tab_controller.viewControllers = [nav_controller, sign_in_controller, sign_up_controller]
+
+    @window.rootViewController = tab_controller
     true
-    # @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-
-    # @navigation_controller = UINavigationController.alloc.initWithRootViewController(UserController.controller)
-    # @window.rootViewController = @navigation_controller
-    # @window.makeKeyAndVisible
-
-    # @login = LoginController.alloc.init
-    # @login_navigation = UINavigationController.alloc.initWithRootViewController(@login)
-
-    # UserController.controller.presentModalViewController(@login_navigation, animated:false)
-
-    # true
+    
   end
 end
+
+
